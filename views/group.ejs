@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Groups</title>
+  </head>
+  <body>
+    <h1>User Groups</h1>
+    <!-- Logout button -->
+    <form id="logoutForm" action="/logout?logout=true" method="post">
+      <button type="submit">Logout</button>
+    </form>
+
+    <script>
+      // Check if the URL contains a logout query parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const logoutSuccess = urlParams.get("logout");
+      if (logoutSuccess) {
+        alert("Logout successful");
+      }
+    </script>
+  </body>
+</html>
